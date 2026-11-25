@@ -14,7 +14,10 @@
 		"dev": "node --watch server.js",
 		"db:validate": "prisma validate",
 		"db:generate": "prisma generate",
+		"db:push": "prisma db push",
 		"db:check": "node scripts/check-db.js",
+		"db:export": "node scripts/export-products.js",
+		"db:seed": "node scripts/seed.js",
 		"db:studio": "node scripts/studio.js",
 		"db:migrate": "prisma migrate dev",
 		"test": "npm run db:validate"
