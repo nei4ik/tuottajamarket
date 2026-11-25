@@ -1,0 +1,23 @@
+generator client {
+	provider            = "prisma-client"
+	output              = "../generated/prisma"
+	moduleFormat        = "esm"
+	importFileExtension = "ts"
+}
+
+datasource db {
+	provider = "postgresql"
+}
+
+model Product {
+	id          Int      @id @default(autoincrement())
+	title       String
+	description String
+	price       Decimal  @db.Decimal(10, 2)
+	category    String
+	imageUrl    String?
+	createdAt   DateTime @default(now()) @db.Timestamp(3)
+	updatedAt   DateTime @updatedAt @db.Timestamp(3)
+	featured    Boolean?
+}
+

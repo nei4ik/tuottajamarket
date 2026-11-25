@@ -1,0 +1,12 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"installCommand": "cd tuottajamarket && npm install",
+	"buildCommand": "cd tuottajamarket && npm run build",
+	"outputDirectory": "tuottajamarket/dist",
+	"rewrites": [
+		{
+			"source": "/(.*)",
+			"destination": "/index.html"
+		}
+	]
+}
