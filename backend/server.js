@@ -16,11 +16,11 @@ app.use(
 	})
 );
 
-app.get("/health", (req, res) => {
+app.get(["/health", "/api/health"], (req, res) => {
 	res.status(200).send("OK");
 });
 
-app.get("/products", async (req, res) => {
+app.get(["/products", "/api/products"], async (req, res) => {
 	try {
 		const products = await prisma.product.findMany();
 		res.json(products);

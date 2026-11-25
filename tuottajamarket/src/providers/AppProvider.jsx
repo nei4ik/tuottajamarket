@@ -10,7 +10,7 @@ export const AppProvider = ({ children }) => {
 
 	useEffect(() => {
 		const controller = new AbortController();
-		const apiBaseUrl = (import.meta.env.VITE_API_URL || "http://localhost:3000").replace(/\/+$/, "");
+		const apiBaseUrl = (import.meta.env.VITE_API_URL || "/api").replace(/\/+$/, "");
 
 		async function loadProducts() {
 			try {
